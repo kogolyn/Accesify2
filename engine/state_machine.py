@@ -3,15 +3,7 @@ state_machine.py - State Transition Logic
 Member 1 Responsibility: Define and enforce valid state transitions
 """
 
-from enum import Enum
-
-
-class AccessState(Enum):
-    ACTIVE = "ACTIVE"
-    GRACE = "GRACE"
-    EXPIRED = "EXPIRED"
-    REVOKED = "REVOKED"
-
+from engine.access_engine import AccessState
 
 # ─────────────────────────────────────────────
 # Valid transitions map:
