@@ -233,24 +233,7 @@ def api_track_usage():
 
 @routes_blueprint.route("/renew-access", methods=["POST"])
 def api_renew_access():
-    """
-    Extend an existing access record's expiry time.
-    Optionally reset the usage counter.
-
-    Request body:
-        {
-            "user_id":                str  (required),
-            "resource_id":            str  (required),
-            "extra_duration_seconds": int  (required) — seconds to add,
-            "reset_usage":            bool (optional, default false)
-        }
-
-    Response 200:
-        { "success": bool, "message": str, "record": { ... } }
-
-    Response 400:
-        { "success": false, "error": "..." }
-    """
+   
     data, err, code = get_json()
     if err:
         return err, code
