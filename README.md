@@ -1,5 +1,6 @@
 🚀 AccessiFy
 A Modular Access Lifecycle & Expiry Engine
+
 📌 Project Overview
 
 AccessiFy is a modular Access Lifecycle Engine designed to manage temporary, quota-based, and revocable access to protected digital resources.
@@ -56,11 +57,7 @@ Expiry evaluation
 
 This layer determines whether access is:
 
-ACTIVE
-
-EXPIRED
-
-REVOKED
+ACTIVE, EXPIRED, REVOKED
 
 It is the source of truth.
 
@@ -90,7 +87,7 @@ Prevents frontend bypass
 
 All enforcement happens server-side.
 
-3️⃣ Frontend Layer (React)
+3️⃣ Frontend Layer 
 
 Provides:
 
@@ -148,7 +145,7 @@ Backend:
 
 Python (Flask)
 
-In-memory data store (prototype)
+In-memory data store 
 
 Frontend:
 
@@ -232,30 +229,6 @@ Rate limiting integration
 Microservice extraction
 
 The architecture supports horizontal scaling with minimal refactor.
-
-🏆 Hackathon Evaluation Alignment
-
-This project was designed to score highly under:
-
-Architectural Soundness
-
-Clear modular layers and separation of concerns.
-
-Logical Resilience
-
-Deterministic backend enforcement and controlled state transitions.
-
-Feature Completeness
-
-End-to-end access lifecycle implemented.
-
-Documentation & Standards
-
-Structured, readable, scalable codebase.
-
-Innovation & Impact
-
-Transforms static permission systems into dynamic lifecycle-managed access.
 
 👥 Team
 
