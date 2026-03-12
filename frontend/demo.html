@@ -442,18 +442,6 @@
         </div>
       </div>
 
-      <!-- Optional params -->
-      <div class="row2">
-        <div class="field">
-          <label>Duration (s)</label>
-          <input id="u-dur" type="number" placeholder="3600" disabled/>
-        </div>
-        <div class="field">
-          <label>Usage Limit</label>
-          <input id="u-ulim" type="number" placeholder="10" disabled/>
-        </div>
-      </div>
-
       <div class="cred-strip locked" id="cred-strip">
         <span class="cred-dot"></span>
         Enter User ID &amp; Resource ID to unlock actions
@@ -659,9 +647,6 @@
     ['b-validate','b-use','b-renew','b-cancel'].forEach(id =>
       document.getElementById(id).disabled = !ok
     );
-    ['u-dur','u-ulim'].forEach(id =>
-      document.getElementById(id).disabled = !ok
-    );
     const strip = document.getElementById('cred-strip');
     strip.className = 'cred-strip ' + (ok ? 'open' : 'locked');
     strip.innerHTML = ok
@@ -673,8 +658,6 @@
     return {
       user_id:          document.getElementById('u-uid').value.trim(),
       resource_id:      document.getElementById('u-rid').value.trim(),
-      duration_seconds: parseInt(document.getElementById('u-dur').value)  || undefined,
-      usage_limit:      parseInt(document.getElementById('u-ulim').value) || undefined,
     };
   }
 
